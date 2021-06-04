@@ -1,0 +1,13 @@
+{
+    "name": "oclock/parcours-s05",
+    "description": "Parcours de la saison 5",
+    "type": "project",
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/var-dumper": "^3.4",
+        "altorouter/altorouter": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {"Snk\\" : "app/"}
+    }
+}

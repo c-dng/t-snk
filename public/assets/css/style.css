@@ -1,0 +1,24 @@
+img.mangaka {
+    background: url("https://pbs.twimg.com/media/EKDQoP9X0AEck0C.jpg");
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 500px;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    left: calc(50% - 250px);
+}
+
+.character-pic {
+    height: 150px;
+    width: 150px; 
+}
+
+.character-pic:hover{
+    transform: scale(2, 0.5);
+
+}
+
+h3 {
+    text-align: center;
+}

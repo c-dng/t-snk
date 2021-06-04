@@ -1,0 +1,21 @@
+# On commence par activer la réécriture d'URL dans Apache
+RewriteEngine On 
+
+# On délègue Ã  Apache l'extraction de la partie statique de l'URL
+# Cette information sera ensuite stockée dans une variable d'environnement
+# Exemple : "/S05/E02/S05-projet-oShop-morganelouis/public" ==> $_SERVER['BASE_URI']
+RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$
+RewriteRule ^(.*) - [E=BASE_URI:%1]
+
+# On demande à  Apache de faire comme d'habitude s'il voit des requêtes vers des dossiers qui existent déjà  (css, img, vendor, ...)
+# MAIS d'activer la réécriture d'URL SEULEMENT si l'URL demandéee n'est pas un dossier qui existe.
+RewriteCond %{REQUEST_FILENAME} !-d
+# MAIS d'activer la réécriture d'URL SEULEMENT si l'URL demandée n'est pas un fichier qui existe.
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# réécriture de l'URL pour la correspondance entre nos chemins "virtuels" (/products) et les vrais chemins (index.php?page=products)
+# /products ==> index.php?page=products
+# /store    ==> index.php?page=store
+# /blog    ==> index.php?page=blog
+# etc.
+RewriteRule ^(.*)$ index.php?page=$1 [QSA,L]

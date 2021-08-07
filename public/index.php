@@ -22,35 +22,34 @@ $router->map(
     'home' // On donne un nom (un identifiant Ã  la route). On va prendre comme convention : nomDuControleur-nomDeLaMethode
 );
 
-
 $router->map(
     'GET',  
-    '/creator',   
+    '/manga',   
     [       
         'controller' => 'Snk\Controllers\MainController',
-        'method' => 'creator'
+        'method' => 'manga'
     ],
-    'creator'  
+    'manga'  
 );
 
 $router->map(
     'GET',  
-    '/history',   
+    '/characters',   
     [       
         'controller' => 'Snk\Controllers\MainController',
-        'method' => 'history'
+        'method' => 'characters'
     ],
-    'history'  
+    'characters'  
 );
 
 $router->map(
     'GET',  
-    '/spoils',   
+    '/contact',   
     [       
         'controller' => 'Snk\Controllers\MainController',
-        'method' => 'spoils'
+        'method' => 'contact'
     ],
-    'spoils'  
+    'contact'  
 );
 
 // Début du dispatcher: mise en place du matching

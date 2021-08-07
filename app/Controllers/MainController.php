@@ -6,21 +6,14 @@ use Snk\Models\Character;
 
 class MainController extends CoreController {
     public function home() {
-        // Instanciation de la classe Character
-        $characterClass = new Character();
-
-        // Je récupère tous les personnages grâce à la méthode findAll du model Character.
-        $characters = $characterClass->findAll();
-
         // Appel de la méthode show héritée de CoreController
-        $this->show('home', [
-            'charactersList' => $characters,
-        ]);
+        $this->show('home');
+            // 'charactersList' => $characters,
     }
 
-    public function creator() {
+    public function manga() {
         // Appel de la méthode show héritée de CoreController
-        $this->show('creator');
+        $this->show('manga');
     }
 
     public function history() {
@@ -28,9 +21,22 @@ class MainController extends CoreController {
         $this->show('history');
     }
 
-    public function spoils() {
+    public function characters() {
+        // Instanciation de la classe Character
+        $characterClass = new Character();
+
+        // Je récupère tous les personnages grâce à la méthode findAll du model Character.
+        $characters = $characterClass->findAll();
+        
         // Appel de la méthode show héritée de CoreController
-        $this->show('spoils');
+        $this->show('characters', [
+            'charactersList' => $characters,
+        ]);
+    }
+
+    public function contact()
+    {
+        $this->show('contact');
     }
 
     public function page404()

@@ -1,6 +1,6 @@
         </main>
         <footer class="bg-dark text-white text-center p-2 my-3">
-            Tous droits réservés &copy; O'clock <?= date('Y') ?>
+            Tous droits réservés &copy; Camille <?= date('Y') ?>
         </footer>
     </div>
     

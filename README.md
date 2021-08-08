@@ -1,7 +1,7 @@
 ## Ce projet
 
-Il portant sur l'univers de l'Attaque des Titans. On peut en découvrir un peu plus l'histoire, le mangaka, les personnages..
-Les personnages principaux récupérés en base de données sur Adminer.
+Il porte sur l'univers de l'Attaque des Titans. On peut en découvrir un peu plus l'histoire du manga, le mangaka, ainsi que les personnages..
+Les personnages principaux sont récupérés en base de données (Adminer).
 
 ## Langages utilisés
 [![forthebadge](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://forthebadge.com)
